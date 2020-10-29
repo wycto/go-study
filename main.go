@@ -1,5 +1,7 @@
 package main
 
+import "study/example"
+
 func main() {
 	/*c := math.Add(12, 23)
 	fmt.Println(c)
@@ -10,5 +12,16 @@ func main() {
 	fmt.Println(math.GetN())*/
 
 	//example MakeOrNew
+	//makeOrNew := example.MakeOrNew{}
+	//makeOrNew.MakeMap()
+	//makeOrNew.NewMap()
+	//makeOrNew.MakeSlice()
+	//makeOrNew.CopySlice()
+	//makeOrNew.DeleteSlice()
 
+	/*example: panic and recover*/
+	panicAndRecover := example.PanicAndRecover{}
+	/*panicAndRecover.ReceivePanic()
+	panicAndRecover.RecoverPanic()*/
+	panicAndRecover.RecoverPanicTest()
 }
