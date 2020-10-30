@@ -1,6 +1,6 @@
 package main
 
-import "study/example"
+import "study/json"
 
 func main() {
 	/*c := math.Add(12, 23)
@@ -20,8 +20,17 @@ func main() {
 	//makeOrNew.DeleteSlice()
 
 	/*example: panic and recover*/
-	panicAndRecover := example.PanicAndRecover{}
+	//panicAndRecover := example.PanicAndRecover{}
 	/*panicAndRecover.ReceivePanic()
 	panicAndRecover.RecoverPanic()*/
-	panicAndRecover.RecoverPanicTest()
+	//panicAndRecover.RecoverPanicTest()
+
+	/*example: json*/
+	user := json.User{}
+	user.JsonEncodeStruct()
+	user.JsonEncodeMap()
+
+	jsonDecode := json.JsonDecode{}
+	jsonDecode.JsonDecodeStruct()
+	jsonDecode.JsonDecodeMap()
 }
