@@ -11,6 +11,9 @@ type User struct {
 	Sex  string `json:"sex"`
 }
 
+/**
+序列化结构体
+*/
 func (receiver *User) JsonEncodeStruct() {
 	receiver.Name = "JsonEncodeStruct"
 	receiver.Age = 30
@@ -20,6 +23,9 @@ func (receiver *User) JsonEncodeStruct() {
 	fmt.Println("json data: ", string(jsonData))
 }
 
+/**
+序列化Map
+*/
 func (receiver *User) JsonEncodeMap() {
 	myMap := make(map[string]interface{}) //interface代表任意类型，随便什么数据类型
 	myMap["Name"] = "JsonEncodeMap"
