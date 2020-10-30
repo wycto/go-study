@@ -1,6 +1,6 @@
 package main
 
-import "study/json"
+import "study/point"
 
 func main() {
 	/*c := math.Add(12, 23)
@@ -26,11 +26,16 @@ func main() {
 	//panicAndRecover.RecoverPanicTest()
 
 	/*example: json*/
-	user := json.User{}
+	/*user := json.User{}
 	user.JsonEncodeStruct()
 	user.JsonEncodeMap()
 
 	jsonDecode := json.JsonDecode{}
 	jsonDecode.JsonDecodeStruct()
-	jsonDecode.JsonDecodeMap()
+	jsonDecode.JsonDecodeMap()*/
+
+	/*example: point*/
+	point.TestPoint()
+	point.ArrPoint()
+	point.PointArr()
 }
