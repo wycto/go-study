@@ -1,5 +1,8 @@
 package main
 
+/*
+指针学习篇
+*/
 import "study/point"
 
 func main() {
