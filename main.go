@@ -3,7 +3,10 @@ package main
 /*
 指针学习篇
 */
-import "study/point"
+import (
+	"study/example"
+	"study/point"
+)
 
 func main() {
 	/*c := math.Add(12, 23)
@@ -23,10 +26,10 @@ func main() {
 	//makeOrNew.DeleteSlice()
 
 	/*example: panic and recover*/
-	//panicAndRecover := example.PanicAndRecover{}
+	panicAndRecover := example.PanicAndRecover{}
 	/*panicAndRecover.ReceivePanic()
 	panicAndRecover.RecoverPanic()*/
-	//panicAndRecover.RecoverPanicTest()
+	panicAndRecover.RecoverPanicTest()
 
 	/*example: json*/
 	/*user := json.User{}

@@ -34,3 +34,7 @@ func PointArr() {
 	pointArr := [...]int{4, 6, 9}
 	fmt.Println("指针数组：", &pointArr)
 }
+
+func init() {
+	fmt.Println("this is point point.go init")
+}
