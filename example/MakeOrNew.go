@@ -6,6 +6,7 @@ import (
 )
 
 type MakeOrNew struct {
+	Name string "weiyi"
 }
 
 func (receiver *MakeOrNew) MakeMap() {
