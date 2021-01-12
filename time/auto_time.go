@@ -1,8 +1,7 @@
-package main
+package time
 
 import "fmt"
 
-func main() {
+func Start() {
 	fmt.Println("定时任务：")
-
 }

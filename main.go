@@ -4,11 +4,35 @@ package main
 指针学习篇
 */
 import (
-	"study/example"
-	"study/point"
+	"fmt"
+	"os/exec"
+	"time"
 )
 
+// "study/example"
+
 func main() {
+
+	var secondTime time.Duration;
+	var shFileName string;
+
+	fmt.Println("定时任务：")
+
+	fmt.Println("请输入定时器时间间隔，秒数：")
+	fmt.Scanln(&secondTime)
+
+	fmt.Println("请输入sh命令文件名称：")
+	fmt.Scanln(&shFileName)
+
+	fmt.Println(time.Second)
+
+	ticker := time.NewTicker(secondTime * time.Second)
+	for _ = range ticker.C {
+		//fmt.Println(time.Now())
+		cmd := exec.Command("sh",shFileName)
+		fmt.Println(cmd)
+		fmt.Println(cmd.Run())
+	}
 	/*c := math.Add(12, 23)
 	fmt.Println(c)
 	user := math.User{}
@@ -26,10 +50,10 @@ func main() {
 	//makeOrNew.DeleteSlice()
 
 	/*example: panic and recover*/
-	panicAndRecover := example.PanicAndRecover{}
+	// panicAndRecover := example.PanicAndRecover{}
 	/*panicAndRecover.ReceivePanic()
 	panicAndRecover.RecoverPanic()*/
-	panicAndRecover.RecoverPanicTest()
+	// panicAndRecover.RecoverPanicTest()
 
 	/*example: json*/
 	/*user := json.User{}
@@ -41,7 +65,7 @@ func main() {
 	jsonDecode.JsonDecodeMap()*/
 
 	/*example: point*/
-	point.TestPoint()
+	/* point.TestPoint()
 	point.ArrPoint()
-	point.PointArr()
+	point.PointArr() */
 }
